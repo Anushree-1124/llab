@@ -1,0 +1,12 @@
+FROM openjdk:23
+WORKDIR /app
+COPY . /app
+RUN javac add.java
+CMD ["java","add"]
+
+
+
+FROM python:3.12
+WORKDIR /app
+COPY . /app
+CMD ["pyhon","add.py"]
